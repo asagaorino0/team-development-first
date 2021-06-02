@@ -1,11 +1,9 @@
-
-
 import React, { useState } from 'react';
-
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
+import { useSelector, useDispatch } from 'react-redux';
 import {
   decrement,
   increment,
+  reset,
   incrementByAmount,
   incrementAsync,
   incrementIfOdd,
@@ -14,8 +12,8 @@ import {
 import styles from './Counter.module.css';
 
 export function Counter() {
-  const count = useAppSelector(selectCount);
-  const dispatch = useAppDispatch();
+  const count = useSelector(selectCount);
+  const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');
 
   const incrementValue = Number(incrementAmount) || 0;
@@ -37,6 +35,14 @@ export function Counter() {
           onClick={() => dispatch(increment())}
         >
           +
+        </button>
+        <span className={styles.value}></span>
+        <button
+          className={styles.button}
+          aria-label="reset"
+          onClick={() => dispatch(reset())}
+        >
+          0
         </button>
       </div>
       <div className={styles.row}>
