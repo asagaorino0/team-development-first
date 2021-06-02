@@ -16,6 +16,7 @@ import { UserType } from '../types/UserType';
 
 const Header = () => {
     const [avatarG, setAvatarG] = useState<string>('')
+    const [name, setName] = useState<string>('')
     const [nameG, setNameG] = useState<string>('')
     const history = useHistory()
     const onPageA = () => {
@@ -28,7 +29,8 @@ const Header = () => {
         history.push('/PageC');
     }
     const handleClick = () => {
-        window.alert(nameG + "さん！ようこそ！！");
+        setNameG(`${name}`)
+        window.alert(`${name}` + "さん！ようこそ！！");
     }
     const googleClick = () => {
         var provider = new firebase.auth.GoogleAuthProvider();
@@ -75,7 +77,7 @@ const Header = () => {
                         defaultValue=""
                         autoComplete="email"
                         // autoFocus
-                        onChange={e => setNameG(e.target.value)}
+                        onChange={e => setName(e.target.value)}
                     />
                     <SendIcon onClick={handleClick} />
                     <Button
