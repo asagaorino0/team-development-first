@@ -33,6 +33,7 @@ const Header = () => {
         {
             `${name}`.length === 0 &&
                 window.alert("何か入力してください (｀・ω・´)")
+            setName('')
         };
         {
             `${name}`.length !== 0 &&
