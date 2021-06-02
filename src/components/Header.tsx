@@ -25,6 +25,11 @@ const Header = () => {
   const onPageB = () => {
     history.push('/PageB');
   };
+  const example = () => {
+    console.log(
+      '(｀・ω・´)(｀・ω・´)(｀・ω・´)(｀・ω・´)(｀・ω・´)(｀・ω・´)(｀・ω・´)(｀・ω・´)(｀・ω・´)(｀・ω・´)(｀・ω・´)(｀・ω・´)'
+    );
+  };
   const onPageC = () => {
     history.push('/PageC');
   };
