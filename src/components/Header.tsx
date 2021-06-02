@@ -30,7 +30,14 @@ const Header = () => {
     }
     const handleClick = () => {
         setNameG(`${name}`)
-        window.alert(`${name}` + "さん！ようこそ (｀・ω・´)");
+        {
+            `${name}`.length === 0 &&
+            window.alert("何か入力してください (｀・ω・´)")
+        };
+        {
+            `${name}`.length !== 0 &&
+            window.alert(`${name}` + "さん！ようこそ !!")
+        };
     }
     const googleClick = () => {
         var provider = new firebase.auth.GoogleAuthProvider();
