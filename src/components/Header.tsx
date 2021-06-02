@@ -32,11 +32,11 @@ const Header = () => {
         setNameG(`${name}`)
         {
             `${name}`.length === 0 &&
-            window.alert("何か入力してください (｀・ω・´)")
+                window.alert("何か入力してください (｀・ω・´)")
         };
         {
             `${name}`.length !== 0 &&
-            window.alert(`${name}` + "さん！ようこそ !!")
+                window.alert(`${name}` + "さん！ようこそ !!")
         };
     }
     const googleClick = () => {
@@ -73,7 +73,7 @@ const Header = () => {
 
     return (
         <div>
-            {nameG.length === 0 &&
+            {nameG.length === 0 && (
                 <Toolbar>
                     <TextField
                         variant="outlined"
@@ -84,7 +84,7 @@ const Header = () => {
                         defaultValue=""
                         autoComplete="email"
                         // autoFocus
-                        onChange={e => setName(e.target.value)}
+                        onChange={(e) => setName(e.target.value)}
                     />
                     <SendIcon onClick={handleClick} />
                     <Button
@@ -94,9 +94,9 @@ const Header = () => {
                         color="primary"
                     >
                         google in
-                    </Button>
+          </Button>
                 </Toolbar>
-            }
+            )}
 
             {nameG.length !== 0 && (
                 <Toolbar>
