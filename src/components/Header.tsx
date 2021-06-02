@@ -30,7 +30,7 @@ const Header = () => {
     }
     const handleClick = () => {
         setNameG(`${name}`)
-        window.alert(`${name}` + "さん！ようこそ！！");
+        window.alert(`${name}` + "さん！ようこそ (｀・ω・´)");
     }
     const googleClick = () => {
         var provider = new firebase.auth.GoogleAuthProvider();
@@ -91,29 +91,33 @@ const Header = () => {
                 </Toolbar>
             }
 
-            {nameG.length !== 0 &&
-
+            {nameG.length !== 0 && (
                 <Toolbar>
-                    {avatarG.length !== 0 &&
-                        <img src={`${avatarG}`} alt="" style={{ borderRadius: '50%', width: '40px', height: '40px' }} />
-                    }
+                    {avatarG.length !== 0 && (
+                        <img
+                            src={`${avatarG}`}
+                            alt=""
+                            style={{ borderRadius: '50%', width: '40px', height: '40px' }}
+                        />
+                    )}
                     <h3>{`${nameG}さん！ようこそ！！`}</h3>
                 </Toolbar>
-            }
+            )}
             <AppBar position="static">
-                {nameG.length !== 0 &&
+                {nameG.length !== 0 && (
                     <Toolbar>
                         <h3 onClick={onPageA}>PageA:</h3>
                         <h3 onClick={onPageB}>PageB:</h3>
                         <h3 onClick={onPageC}>PageC:</h3>
-                        <Button variant="contained" onClick={signOut}>Logout</Button><br />
+                        <Button variant="contained" onClick={signOut}>
+                            Logout
+            </Button>
+                        <br />
                     </Toolbar>
-                }
+                )}
             </AppBar>
-
-
         </div>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;
