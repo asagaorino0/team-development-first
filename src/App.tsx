@@ -7,7 +7,7 @@ import Header from './components/Header'
 import PageA from './pages/PageA'
 import PageB from './pages/PageB'
 import PageC from './pages/PageC'
-import { Login } from './pages/Login';
+// import { Login } from './pages/Login';
 import { BrowserRouter as Router, MemoryRouter, Route, Switch } from 'react-router-dom'
 
 function App() {
