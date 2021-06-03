@@ -23,17 +23,20 @@ const PageB: React.FC<CpuType> = () => {
                         borderRadius: '50%',
                         width: '160px',
                         height: '160px',
-                        fontSize: '78px',
+                        fontSize: '70px',
                         color: '#fff',
                         backgroundColor: 'red',
                         // display: 'inlineBlock',
                         margin: '0 auto',
+                        lineHeight: '150px'
+                        // verticalAlign: 'middle',
                         // textAlign: 'center',
                         // alignItems: 'center',
-                        alignSelf: 'center',
-                        display: 'inherit',
-                        alignItems: 'inherit',
-                        justifyContent: 'inherit',
+
+                        // alignSelf: 'center',
+                        // display: 'inherit',
+                        // alignItems: 'inherit',
+                        // justifyContent: 'inherit',
                     }}>{cpu}</div>}
 
         </div>
