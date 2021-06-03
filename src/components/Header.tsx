@@ -114,9 +114,9 @@ const Header = () => {
             <AppBar position="static">
                 {nameG.length !== 0 && (
                     <Toolbar>
-                        <h3 onClick={onPageA}>PageA:</h3>
-                        <h3 onClick={onPageB}>PageB:</h3>
-                        <h3 onClick={onPageC}>PageC:</h3>
+                        <h3 onClick={onPageA} style={{ cursor: 'pointer' }}>PageA:</h3>
+                        <h3 onClick={onPageB} style={{ cursor: 'pointer' }}>PageB:</h3>
+                        <h3 onClick={onPageC} style={{ cursor: 'pointer' }}>PageC:</h3>
                         <Button variant="contained" onClick={signOut}>
                             Logout
             </Button>
