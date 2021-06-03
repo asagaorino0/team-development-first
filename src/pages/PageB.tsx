@@ -13,7 +13,6 @@ const PageB: React.FC<CpuType> = () => {
 
     return (
         <div style={{ textAlign: 'center' }}>
-            {/* // <div className="App"> */}
             <button onClick={uranau} style={{ marginBottom: '50px' }}
             >omikuzi
             </button>
@@ -26,17 +25,8 @@ const PageB: React.FC<CpuType> = () => {
                         fontSize: '70px',
                         color: '#fff',
                         backgroundColor: 'red',
-                        // display: 'inlineBlock',
                         margin: '0 auto',
                         lineHeight: '150px'
-                        // verticalAlign: 'middle',
-                        // textAlign: 'center',
-                        // alignItems: 'center',
-
-                        // alignSelf: 'center',
-                        // display: 'inherit',
-                        // alignItems: 'inherit',
-                        // justifyContent: 'inherit',
                     }}>{cpu}</div>}
 
         </div>
